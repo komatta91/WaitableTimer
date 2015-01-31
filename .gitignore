@@ -1,0 +1,7 @@
+Debug
+*.sdf
+/Protocol/Debug
+/Klient/Debug
+/Serwe/Debug
+/Tests/Debug
+WaitableTimer.v12.suo

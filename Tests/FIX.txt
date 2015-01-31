@@ -1,0 +1,9 @@
+preprocesor: _VARIADIC_MAX=10
+
+include: $(ProjectDir)include
+
+library: $(ProjectDir)lib
+
+input: gtest.lib
+
+add item: gtest-all.cc, Run.cpp
