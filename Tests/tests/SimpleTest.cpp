@@ -7,12 +7,17 @@
 
 bool closeEnough(long long left, long long right, int threshold = 5)
 {
-	return std::abs(left - right) < threshold;
+	//return (std::abs(left - right) < threshold) ;
+	return left <= right;// || (std::abs(left - right) < threshold);
 }
 
 HANDLE RunServer()
 {
+#ifdef _DEBUG
 	const char * cmd = "..\\Debug\\Serwer.exe";
+#else
+	const char * cmd = "..\\Release\\Serwer.exe";
+#endif
 	PROCESS_INFORMATION pi;
 	STARTUPINFOA si;
 	ZeroMemory(&pi, sizeof(pi));
@@ -77,7 +82,7 @@ HANDLE Connect()
 	{
 		return NULL;
 	}
-
+	Sleep(500);
 	return hPipe;
 }
 
